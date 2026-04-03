@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4</title>
+
+    <style>
+        body {
+            background: #f6f0e7;
+        }
+
+        .topbar {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            width: 95%;
+            justify-content: space-between;
+        }
+
+        .toplogocont {
+            float: left;
+            width: fit-content;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .toplogotxt {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 140%;
+            letter-spacing: 0%;
+            margin-left: 10px;
+            float: right;
+        }
+
+        .topmenu {
+            display: flex;
+            float: left;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topmenuentry {
+            width: fit-content;
+            padding: 5px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 22px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            margin-left: 50px;
+        }
+
+        .topsearchbar {
+            display: flex;
+            width: 314px;
+            height: 60px;
+            opacity: 1;
+            top: 39px;
+            left: 1132px;
+            border-radius: 30px;
+            background-color: #fff9f0bd;
+            box-shadow: 0px 12px 40px -16px #0000001A;
+            justify-content: space-between;
+            overflow: hidden;
+        }
+
+        .topsearchbarblock1 {
+            width: 80%;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .searchimg {
+            float: left;
+            margin-top: 5px;
+            margin-right: 10px;
+        }
+
+        .topsearchbarblock2 {
+            width: 20%;
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+
+        .topsearchbarword {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            margin-top: 10px;
+        }
+
+        .topsearchbarblockline {
+            border-width: 1px;
+            rotate: 0deg;
+            border: 1px solid #948C8C4F;
+            margin-top: auto;
+            margin-bottom: auto;
+            height: 70%;
+        }
+
+        .topsearchbarpop {
+            width: 17px;
+            height: 17px;
+            border-radius: 17px;
+            background-color: #EC2633;
+            box-shadow: 0px 2px 23px 1px #FF3334B8;
+            position: sticky;
+            bottom: 50px;
+            color: #ffffff;
+        }
+
+        .midblock {
+            display: flex;
+            width: 96%;
+            height: 800px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            margin-left: 2%;
+            margin-right: 2%;
+            justify-content: space-between;
+        }
+
+        .textblock {
+            height: fit-content;
+            width: 48%;
+            margin-top: 10%;
+            margin-bottom: auto;
+        }
+
+        .imgblock {
+            height: fit-content;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 50%;            font-style: Regular;
+
+        }
+
+        .mainmidlogo {
+            color: #FF7E00;
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 125px;
+            line-height: 95%;
+            letter-spacing: -3.5%;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .secmidlogoblock {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: Bold;
+            font-size: 52px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            color: #2F2F2F;
+            margin-top: 15px;
+            width: 500px;
+        }
+
+        .infotext {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 139%;
+            letter-spacing: 0%;
+            color: #909090;
+            margin-top: 20px;
+        }
+
+        .orderbutton {
+            display: block;
+            width: 188px;
+            height: 70px;
+            border-radius: 84px;
+            opacity: 1;
+            background: #2F2F2F;
+            box-shadow: 0px 20px 32px -8px #00000033;
+            margin-top: 20px;
+            float: left;
+        }
+
+        .orderbuttontext {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            color: #ffffff;
+            margin-top: 25px;
+            margin-left: 35px;
+        }
+
+        .videobuttonblock {
+            display: block;
+            float: left;
+            background-color: #fff9f0bd;
+            width: 250px;
+            margin-top: 28px;
+            height: 57px;
+            margin-left: 25px;
+            border-radius: 57px;
+            box-shadow: 0px 0px 3px 1px #00000044;
+        }
+
+        .videobutton {
+            display: block;
+            width: 57px;
+            height: 57px;
+            border-radius: 57px;
+            background-color: #ffffff;
+            box-shadow: 0px 20px 36px -16px #0000001A;
+            float: right;
+            position: absolute;
+        }
+
+        .videobuttontriangle {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px 0px 10px 20px;
+            border-color: transparent transparent transparent #000000;
+            transform: rotate(0deg);
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+
+
+        .videobuttontext {
+            display: block;
+            font-family: "Poppins", sans-serif;
+            float: right;
+            font-weight: 600;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            position: relative;
+            margin-top: 20px;
+            margin-right: 40px;
+            color: #2F2F2F;
+        }
+
+        .ratingblock {
+            display: block;
+            width: 100%;
+            height: 20%;
+            margin-top: 125px;
+        }
+
+        .starblock {
+            height: 25%;
+            width: fit-content;
+        }
+
+        .starimg {
+            height: 100%;
+        }
+
+        .ratingstatement {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 95%;
+            letter-spacing: 0%;
+            color: #2F2F2F;
+            margin-top: 10px;
+        }
+
+        img {
+            position: relative;
+        }
+
+        @media (max-width:1100px) {
+            .imgblock {
+                display: none;
+            }
+            .textblock {
+                width: 100%;
+            }
+        }
+        @media (max-width:800px) {
+            .topmenuentry {
+                display: none;
+            }
+        }
+        @media (max-width:1000px) {
+            .topmenuentry {
+                margin-left: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="toplogocont">
+            <img src="img/chef-hat (2) 1.svg">
+            <div class="toplogotxt">Foo</div>
+        </div>
+        <div class="topmenu">
+            <div class="topmenuentry">Home</div>
+            <div class="topmenuentry">Menu</div>
+            <div class="topmenuentry">Contact</div>
+            <div class="topmenuentry">Shop</div>
+        </div>
+        <div class="topsearchbar">
+            <div class="topsearchbarblock1">
+                <img class="searchimg" src="img/Vector.svg" height="80%">
+                <div class="topsearchbarword">Search</div>
+            </div>
+            <div class="topsearchbarblockline"></div>
+            <div class="topsearchbarblock2">
+                <img src="img/Shopping cart.svg" height="80%">
+                <div class="topsearchbarpop"></div>
+            </div>
+        </div>
+    </div>
+    <div class="midblock">
+        <div class="textblock">
+            <div class="mainmidlogo">Fast</div>
+            <div class="secmidlogoblock">Food Delivery</div>
+            <div class="infotext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, provident?</div>
+            <a class="orderbutton" href="">
+                <div class="orderbuttontext">Order Now</div>
+            </a>
+            <a class="videobuttonblock" href="">
+                <div class="videobutton">
+                    <div class="videobuttontriangle"></div>
+                </div>
+                <div class="videobuttontext">Watch Video</div>
+            </a>
+            <div class="ratingblock">
+                <div class="starblock">
+                    <img class="starimg" src="img/emojione_star.svg" alt=""><img class="starimg"
+                        src="img/emojione_star.svg" alt=""><img class="starimg" src="img/emojione_star.svg" alt=""><img
+                        class="starimg" src="img/emojione_star.svg" alt=""><img class="starimg"
+                        src="img/emojione_star.svg" alt="">
+                </div>
+                <div class="ratingstatement">5 star rating</div>
+                <div class="infotext">based on 1788 reviews</div>
+            </div>
+        </div>
+        <div class="imgblock"><img src="img/17372 [Converted] 1.png" width="93%"></div>
+    </div>
+</body>
+
+</html>
